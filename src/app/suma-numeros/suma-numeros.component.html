@@ -1,0 +1,18 @@
+<div class="container" style="text-align: center;margin-top: 25px;">
+    <h3 style="color: red;">SUMA Y RESTA DE NÚMEROS</h3>
+    <h5>Primer Número:</h5>
+    <input type="text" [(ngModel)]="primerNumero" id="primerNumero" name="primerNumero" style="width: 100%;text-align: right;"
+      (keypress)="numberOnly($event)" maxlength=200 />
+    <h5>Segundo Número:</h5>
+    <input type="text" [(ngModel)]="segundoNumero" id="segundoNumero" name="segundoNumero" style="width: 100%;text-align: right;"
+      (keypress)="numberOnly($event)" maxlength=200 />
+    <br>
+    <button class="btn btn-info my-2" (click)="sumarNumeros()">Sumar</button>
+    <button class="btn btn-danger my-2 mx-2" (click)="restarNumeros()">Restar</button>
+    <h5>Resultado:</h5>
+    <input type="text" [(ngModel)]="resultado" id="resultado" name="resultado" readonly style="width: 100%;text-align: right;" />
+    <div style="color: red;font-size: 25px;">
+      {{mensaje}}
+    </div>
+  </div>
+  
